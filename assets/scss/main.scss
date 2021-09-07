@@ -1,8 +1,8 @@
 :root {
     --input-color-primary: #96e6a1;
     --input-color-secondary: #accbee;
-    --color-bg: #d4fc79;
     --color-white: #fff;
+    --color-dark: rgba(0, 0, 0,0.9);
     --header-background: hsla(0, 0%, 100%, 0.8);
     --header-border-bottom: inset 0 -1px 0 0 rgba(0, 0, 0, 0.1);
     --color-title: #613bdb;
@@ -59,10 +59,6 @@ input {
         &:checked+label {
             filter: brightness(150%);
             transform: scale(1.3);
-            -webkit-transform: scale(1.3);
-            -moz-transform: scale(1.3);
-            -ms-transform: scale(1.3);
-            -o-transform: scale(1.3);
             -webkit-filter: brightness(150%);
             box-shadow: 0px 0 10px rgba(255, 255, 255, 0.85);
         }
@@ -72,7 +68,7 @@ input {
         -webkit-appearance: none;
         -moz-appearance: none;
         appearance: none;
-        background-image: linear-gradient(120deg, var(--color-title), #96e6a1 100%);
+        background-image: linear-gradient(120deg, var(--color-title), var(--input-color-secondary) 100%);
         width: 160px;
         border-radius: 50px;
 
@@ -116,14 +112,14 @@ input {
     background-color: transparent;
     font-size: 1.5rem;
     font-weight: 500;
-    color: var(--color-white);
+    color: var(--color-dark);
     width: 100%;
 }
 
 #display-password-length {
     width: 30px;
     background-color: transparent;
-    color: var(--color-white);
+    color: var(--color-dark);
     font-weight: 600;
     letter-spacing: 1.2px;
 }
@@ -157,7 +153,6 @@ input {
 button {
   
     margin: 14px 0 20px;
-    /* background-image: linear-gradient(120deg, #d4fc79 0%, #96e6a1 100%); */
     background-color:  var(--color-title);
     color:var(--header-background);
     
